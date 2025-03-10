@@ -84,30 +84,22 @@ class Circle extends BaseEntity {
 class Heart extends BaseEntity {
     paint() {
         const { ctx, radius } = this;
-        // Scale factor to fit the heart shape within the radius
         const scale = radius / 256;
         ctx.beginPath();
-        // Translate the origin to match the SVG coordinate system and scale properly
         ctx.save();
         ctx.translate(0, 0);
         ctx.scale(scale, scale);
-        // Recreate the heart shape from the SVG path
-        // M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z
-        // Center the heart on canvas coordinates
         const centerX = 256;
         const centerY = 256;
-        // Draw the exact SVG path
         ctx.moveTo(462.3 - centerX, 62.6 - centerY);
         ctx.bezierCurveTo(407.5 - centerX, 15.9 - centerY, 326 - centerX, 24.3 - centerY, 275.7 - centerX, 76.2 - centerY);
         ctx.lineTo(256 - centerX, 96.5 - centerY);
-        ctx.lineTo(236.3 - centerX, 76.2 - centerY); // -19.7, -20.3 from the point above
+        ctx.lineTo(236.3 - centerX, 76.2 - centerY);
         ctx.bezierCurveTo(186.1 - centerX, 24.3 - centerY, 104.5 - centerX, 15.9 - centerY, 49.7 - centerX, 62.6 - centerY);
         ctx.bezierCurveTo(-13.1 - centerX, 116.2 - centerY, -16.4 - centerX, 212.4 - centerY, 39.8 - centerX, 270.5 - centerY);
         ctx.lineTo(233.3 - centerX, 470.3 - centerY);
-        // Add the center curve (small arc) at the bottom of the heart
         ctx.bezierCurveTo(239.5 - centerX, 476.75 - centerY, 249.25 - centerX, 480 - centerY, 256 - centerX, 480 - centerY);
         ctx.bezierCurveTo(262.75 - centerX, 480 - centerY, 272.5 - centerX, 476.75 - centerY, 278.7 - centerX, 470.3 - centerY);
-        // Complete the right side of the heart
         ctx.lineTo(472.2 - centerX, 270.5 - centerY);
         ctx.bezierCurveTo(528.5 - centerX, 212.4 - centerY, 525.2 - centerX, 116.2 - centerY, 462.3 - centerX, 62.6 - centerY);
         ctx.closePath();

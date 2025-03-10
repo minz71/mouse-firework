@@ -51,7 +51,11 @@ interface PolygonParticleOptions extends BaseParticleOptions {
     shape: "polygon";
     shapeOptions: PolygonOptions;
 }
-export type ParticleOptions = CircleParticleOptions | StarParticleOptions | PolygonParticleOptions;
+interface HeartParticleOptions extends BaseParticleOptions {
+    shape: "heart";
+    shapeOptions: HeartOptions;
+}
+export type ParticleOptions = CircleParticleOptions | StarParticleOptions | PolygonParticleOptions | HeartParticleOptions;
 export interface FireworkOptions {
     excludeElements: string[];
     particles: ParticleOptions[];
