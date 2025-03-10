@@ -3,6 +3,7 @@ import anime from "theme-shokax-anime";
 import BaseEntity from "./entity/BaseEntity";
 
 import Circle from "./entity/Circle";
+import Heart from "./entity/Heart";
 import Polygon from "./entity/Polygon";
 import Star from "./entity/Star";
 import { ParticleOptions, StarOptions, PolygonOptions } from "./types";
@@ -12,6 +13,7 @@ const ENTITY_MAP = {
   circle: Circle,
   polygon: Polygon,
   star: Star,
+  heart: Heart,
 };
 
 export const entityFactory = (
