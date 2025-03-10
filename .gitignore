@@ -9,6 +9,5 @@ package-lock.json
 coverage/
 .tmp*
 .vscode
-/dist
 
 pnpm-lock.yaml

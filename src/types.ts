@@ -14,6 +14,8 @@ export type PolygonOptions = CircleOptions & {
   sides: number | [number, number];
 };
 
+export type HeartOptions = CircleOptions;
+
 export type EmitOptions = {
   emitRadius?: number | [number, number]; // default [50, 180]
   radius?: number | [number, number]; // default 0.1
