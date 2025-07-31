@@ -1,6 +1,18 @@
 import BaseEntity from "./BaseEntity";
 
 export default class Heart extends BaseEntity {
+  constructor(
+    ctx: CanvasRenderingContext2D,
+    x: number,
+    y: number,
+    color: string,
+    radius: number,
+    alpha: number,
+    lineWidth?: number
+  ) {
+    super(ctx, x, y, color, radius, alpha, lineWidth);
+  }
+
   paint(): void {
     const { ctx, radius } = this;
   
